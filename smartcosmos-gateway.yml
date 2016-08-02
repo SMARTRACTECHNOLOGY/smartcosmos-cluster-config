@@ -13,10 +13,7 @@ zuul:
     smartcosmos-ext-metadata-rdao: /rest/metadata/**
     smartcosmos-ext-relationships-rdao: /rest/relationships/**
     smartcosmos-edge-user-devkit: /rest/user/**
-    oauth:
-      path: /oauth/**
-      stripPrefix: false
-      url: ${smartcosmos.authorization-server}
+    smartcosmos-auth-server: /oauth/**
 
 logging:
   level:
@@ -40,7 +37,7 @@ smartcosmos:
       client-secret: '{cipher}af7a1662ba0d19daf3f5e3ab2da8947f243ba3bc14d889d21627223bbed726f8e7ac793a8952c00367343918134daef8'
       user-details:
         user:
-          name: '{cipher}0165d4751c3d825709dfe0882cdd7ceacd8c4873748a5315577ed0e0c760b80e64a6e12d59ebf8c153c55c1cb272e94e'
-          password: '{cipher}3a295ca2019e47f9991bf0ce434913b5be267f17e0889aa2e731d3ec9a68bab1'
+            name: '{cipher}0165d4751c3d825709dfe0882cdd7ceacd8c4873748a5315577ed0e0c760b80e64a6e12d59ebf8c153c55c1cb272e94e'
+            password: '{cipher}3a295ca2019e47f9991bf0ce434913b5be267f17e0889aa2e731d3ec9a68bab1'
         server:
           location-uri: http://smartcosmos-auth-server
