@@ -13,7 +13,7 @@ zuul:
     smartcosmos-ext-metadata-rdao: /rest/metadata/**
     smartcosmos-ext-relationships-rdao: /rest/relationships/**
     smartcosmos-edge-user-devkit: /rest/user/**
-    smartcosmos-service-discovery: /service-discovery
+    smartcosmos-service-discovery: /service-discovery/**
     oauth:
       path: /oauth/**
       stripPrefix: false
