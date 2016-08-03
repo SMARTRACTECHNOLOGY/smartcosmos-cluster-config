@@ -10,8 +10,8 @@ zuul:
   prefix: /rest
   routes:
     smartcosmos-edge-things: /things/**
-    smartcosmos-ext-metadata-rdao: /metadata/**
-    smartcosmos-ext-relationships-rdao: /relationships/**
+    smartcosmos-ext-metadata: /metadata/**
+    smartcosmos-ext-relationships: /relationships/**
     smartcosmos-edge-user-devkit: /user/**
     oauth:
       path: /oauth/**
