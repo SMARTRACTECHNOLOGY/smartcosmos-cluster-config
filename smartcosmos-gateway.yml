@@ -13,7 +13,12 @@ zuul:
     smartcosmos-ext-metadata-rdao: /rest/metadata/**
     smartcosmos-ext-relationships-rdao: /rest/relationships/**
     smartcosmos-edge-user-devkit: /rest/user/**
-    smartcosmos-service-discovery: /service-discovery/**
+    eureka:
+      path: /eureka/**
+      url: http://service-discovery:8080/eureka
+    sd:
+      path: /service-discovery/**
+      url: http://service-discovery:8080
     oauth:
       path: /oauth/**
       stripPrefix: false
