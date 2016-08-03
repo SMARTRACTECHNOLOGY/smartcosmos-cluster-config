@@ -30,5 +30,5 @@ logging:
   level:
     ROOT: INFO
     net.smartcosmos: TRACE
-    org.springframework.security: TRACE
-    com.netflix.eureka.registry: WARN
+    org.springframework.security: DEBUG
+    com.netflix.eureka: TRACE
