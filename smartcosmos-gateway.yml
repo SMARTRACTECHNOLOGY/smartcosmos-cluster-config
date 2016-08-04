@@ -26,10 +26,10 @@ zuul:
 logging:
   level:
     ROOT: INFO
-    com.netflix.zuul: DEBUG
+    com.netflix.zuul: INFO
     org.springframework:
-      boot.autoconfigure.security.oauth2: TRACE
-      security: DEBUG
+      boot.autoconfigure.security.oauth2: INFO
+      security: INFO
 
 # Eventually this should be removed and the gateway should pull the auth-service config from config-server
 # directly so there is only one location for this information

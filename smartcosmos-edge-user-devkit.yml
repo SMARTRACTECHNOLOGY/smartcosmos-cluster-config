@@ -18,6 +18,7 @@ spring:
       ddl-auto: update
       naming_strategy: org.hibernate.cfg.EJB3NamingStrategy
 
+
 smartcosmos:
   security:
     enabled: true
@@ -36,6 +37,6 @@ security:
 logging:
   level:
     ROOT: INFO
-    net.smartcosmos: TRACE
-    org.springframework.security: TRACE
-    com.netflix.eureka.registry: WARN
+    net.smartcosmos: INFO
+    org.springframework.security: INFO
+    com.netflix.eureka.registry: INFO

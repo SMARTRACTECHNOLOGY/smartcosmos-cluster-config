@@ -4,6 +4,6 @@ server:
 logging:
   level:
     ROOT: INFO
-    "org.springframework.integration": TRACE
-    "org.springframework.data": TRACE
-    "org.springframework.data.redis.core.RedisConnectionUtils" : WARN
+    "org.springframework.integration": INFO
+    "org.springframework.data": INFO
+    "org.springframework.data.redis.core.RedisConnectionUtils" : INFO
