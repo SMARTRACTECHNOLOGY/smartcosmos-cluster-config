@@ -10,8 +10,8 @@ zuul:
   prefix:
   routes:
     smartcosmos-edge-things: /rest/things/**
-    smartcosmos-ext-metadata-rdao: /rest/metadata/**
-    smartcosmos-ext-relationships-rdao: /rest/relationships/**
+    smartcosmos-ext-metadata: /rest/metadata/**
+    smartcosmos-ext-relationships: /rest/relationships/**
     eureka:
       path: /eureka/**
       url: http://service-discovery:8080/eureka
@@ -23,6 +23,14 @@ zuul:
       stripPrefix: false
       url: ${smartcosmos.authorization-server}
 
+smartcosmos:
+  security:
+    resource:
+      authorization-server:
+        location-uri: http://smartcosmos-auth-server
+        name: ${security.oauth2.client.client-id}
+        password: ${security.oauth2.client.client-secret}
+
 logging:
   level:
     ROOT: INFO
@@ -32,11 +40,3 @@ logging:
       security.oauth2: INFO
       security: INFO
       web.client: INFO
-
-smartcosmos:
-  security:
-    resource:
-      authorization-server:
-        location-uri: http://smartcosmos-auth-server
-        name: ${security.oauth2.client.client-id}
-        password: ${security.oauth2.client.client-secret}
