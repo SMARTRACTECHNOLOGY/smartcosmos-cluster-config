@@ -9,8 +9,10 @@ zuul:
   ignoredServices: "*"
   prefix: /rest
   routes:
-    smartcosmos-ext-things-rdao: /objects/**
-    smartcosmos-ext-metadata-rdao: /metadata/**
+    smartcosmos-edge-things: /things/**
+    smartcosmos-ext-metadata: /metadata/**
+    smartcosmos-ext-relationships: /relationships/**
+    smartcosmos-edge-user-devkit: /user/**
     oauth:
       path: /oauth/**
       stripPrefix: false
@@ -23,3 +25,13 @@ logging:
     org.springframework:
       boot.autoconfigure.security.oauth2: TRACE
       security.oauth2: DEBUG
+      security: DEBUG
+      web.client: TRACE
+
+smartcosmos:
+  security:
+    resource:
+      authorization-server:
+        location-uri: http://smartcosmos-auth-server
+        name: ${security.oauth2.client.client-id}
+        password: ${security.oauth2.client.client-secret}

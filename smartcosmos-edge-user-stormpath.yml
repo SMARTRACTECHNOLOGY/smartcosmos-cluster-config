@@ -1,19 +1,15 @@
-server:
-  port: 50594
+# Stormpath Authentication Configuration
 
-security:
-  user:
-    password: password
+server:
+  port: 45372
 
 smartcosmos:
   security:
     enabled: true
 
-  edge:
-    things:
-      local:
-        things: smartcosmos-ext-things
-        metadata: smartcosmos-ext-metadata-rdao
+  stormpath:
+    applicationName: Profiles
+    apiKeyFileLocation: /opt/smartcosmos/.stormpath/apiKey.properties
 
 logging:
   level:
