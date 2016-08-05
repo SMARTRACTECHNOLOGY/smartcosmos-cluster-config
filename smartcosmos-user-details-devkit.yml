@@ -1,7 +1,7 @@
-# User Management DevKit configuration
+# User Details DevKit configuration
 
 server:
-  port: 45371
+  port: 7777
 
 spring:
   datasource:
@@ -12,10 +12,9 @@ spring:
     username: cosmos
     password: dev
     driver-class-name: org.mariadb.jdbc.Driver
-# XXX Super dangerous to let this get to production.
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: verify
       naming_strategy: org.hibernate.cfg.EJB3NamingStrategy
 
 smartcosmos:
