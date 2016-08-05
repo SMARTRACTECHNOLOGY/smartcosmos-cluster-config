@@ -1,6 +1,9 @@
 info:
   component: Auth Server
 
+server:
+  port: 9999
+
 security:
   oauth2:
     client:
@@ -13,8 +16,8 @@ logging:
   level:
     ROOT: INFO
     org.springframework:
-        security: DEBUG
-        web.client: DEBUG
+        security: INFO
+        web.client: INFO
 
 smartcosmos:
   security:
@@ -32,6 +35,3 @@ smartcosmos:
           password: '{cipher}95aa290e4fd9d380ef9fe9abb492065d1fff2b74f4c32a3aa8c8c07a7882b997'
         server:
           location-uri: http://smartcosmos-user-details-service
-
-server:
-  port: 9999
