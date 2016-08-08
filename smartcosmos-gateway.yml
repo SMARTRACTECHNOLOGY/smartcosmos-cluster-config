@@ -12,6 +12,9 @@ zuul:
     smartcosmos-edge-things: /rest/things/**
     smartcosmos-ext-metadata: /rest/metadata/**
     smartcosmos-ext-relationships: /rest/relationships/**
+    smartcosmos-edge-user-devkit: /rest/users/**
+    smartcosmos-edge-user-devkit: /rest/tenants/**
+    smartcosmos-edge-user-devkit: /rest/roles/**
     eureka:
       path: /eureka/**
       url: http://service-discovery:8080/eureka
