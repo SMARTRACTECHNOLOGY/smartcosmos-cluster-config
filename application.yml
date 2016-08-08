@@ -66,8 +66,8 @@ spring:
 #    async:
 #      request-timeout: 60000
 
-#  ribbon:
-#    ReadTimeout: 120000
+ribbon:
+  ReadTimeout: 30000
 
   cloud:
     stream:
