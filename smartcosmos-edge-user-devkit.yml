@@ -25,14 +25,6 @@ spring:
       ddl-auto: update
       naming_strategy: org.hibernate.cfg.EJB3NamingStrategy
 
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://172.18.0.6:8080/eureka/
-    healthcheck:
-      enables: true
-
 smartcosmos:
   security:
     enabled: true
