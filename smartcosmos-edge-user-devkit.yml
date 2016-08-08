@@ -13,12 +13,12 @@ spring:
     password: ${smartcosmos.datasource.default-password}
     driver-class-name: org.mariadb.jdbc.Driver
     ## XXX Note that in the migration to Spring Boot 1.4 these will need to move:
-    testOnBorrow: true
-    validationQuery: SELECT 1
+    test-on-borrow: true
+    validation-query: SELECT 1
     ## Uncomment for Spring Boot 1.4
     # tomcat:
-    #   testOnBorrow: true
-    #   validationQuery: SELECT 1
+    #   test-on-borrow: true
+    #   validation-query: SELECT 1
 # XXX Super dangerous to let this get to production.
   jpa:
     hibernate:
