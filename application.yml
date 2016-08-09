@@ -15,6 +15,11 @@ kafka:
     address: ${kafka.zookeeper.host}:${kafka.zookeeper.port}
 
 smartcosmos:
+  datasource:
+    default-host: mysql
+    default-username: cosmos
+    default-password: dev
+    default-db: devkit
   authorization-server: http://auth-server:8080
   event-header: "urn:smartcosmos://events:"
 
