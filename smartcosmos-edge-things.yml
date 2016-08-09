@@ -13,7 +13,7 @@ smartcosmos:
     things:
       local:
         things: smartcosmos-ext-things
-        metadata: smartcosmos-ext-metadata-rdao
+        metadata: smartcosmos-ext-metadata
 
 logging:
   level:
