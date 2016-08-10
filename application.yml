@@ -6,7 +6,7 @@ server:
 
 kafka:
   broker:
-    host: ${KAFKA_IP:172.17.0.3}
+    host: ${KAFKA_IP:172.18.0.3}
     port: 9092
     address: ${kafka.broker.host}:${kafka.broker.port}
   zookeeper:
