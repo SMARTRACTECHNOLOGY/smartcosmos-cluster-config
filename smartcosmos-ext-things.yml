@@ -1,7 +1,10 @@
 server:
   port: 8080
+
 management:
   port: 8081
+  security:
+    enabled: false
 
 security:
   user:
