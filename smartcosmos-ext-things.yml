@@ -6,6 +6,9 @@ management:
   security:
     enabled: false
 
+endpoints:
+  enabled: false
+
 security:
   user:
     password: password
