@@ -37,8 +37,6 @@ eureka:
       defaultZone: http://service-discovery:8080/eureka/
     healthcheck:
       enables: true
-management:
-  port: 0
 
 security:
   oauth2:
