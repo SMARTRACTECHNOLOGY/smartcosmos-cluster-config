@@ -3,13 +3,6 @@ server:
 
 management:
   port: 8081
-  security:
-    enabled: false
-
-endpoints:
-  enabled: false
-  prometheus:
-    enabled: true
 
 security:
   user:
