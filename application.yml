@@ -4,6 +4,11 @@ server:
 #  session:
 #    timeout: 60000
 
+management:
+  port: 8081
+  security:
+    enabled: false
+
 kafka:
   broker:
     host: http://kafka
