@@ -3,11 +3,11 @@ server:
 # Debug option: prevent timeout
 #  session:
 #    timeout: 60000
-
-management:
-  port: 8081
-  security:
-    enabled: false
+# 
+# management:
+#   port: 8081
+#   security:
+#     enabled: false
 
 kafka:
   broker:
