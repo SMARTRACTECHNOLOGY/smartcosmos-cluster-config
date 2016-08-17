@@ -7,26 +7,33 @@ server:
 zuul:
   sensitiveHeaders:
   ignoredServices: "*"
-  prefix: /rest
+  prefix:
   routes:
-    smartcosmos-edge-things: /things/**
-    smartcosmos-ext-metadata: /metadata/**
-    smartcosmos-ext-relationships: /relationships/**
-    smartcosmos-edge-user-devkit: /user/**
+    smartcosmos-edge-things: /rest/things/**
+    smartcosmos-ext-metadata: /rest/metadata/**
+    smartcosmos-ext-relationships: /rest/relationships/**
+    users:
+      path: /users/**
+      stripPrefix: false
+      serviceId: smartcosmos-edge-user-devkit
+    tenants:
+      path: /tenants/**
+      stripPrefix: false
+      serviceId: smartcosmos-edge-user-devkit
+    roles:
+      path: /roles/**
+      stripPrefix: false
+      serviceId: smartcosmos-edge-user-devkit
+    eureka:
+      path: /eureka/**
+      url: http://service-discovery:8080/eureka
+    sd:
+      path: /service-discovery/**
+      url: http://service-discovery:8080
     oauth:
       path: /oauth/**
       stripPrefix: false
       url: ${smartcosmos.authorization-server}
-
-logging:
-  level:
-    ROOT: INFO
-    com.netflix.zuul: DEBUG
-    org.springframework:
-      boot.autoconfigure.security.oauth2: TRACE
-      security.oauth2: DEBUG
-      security: DEBUG
-      web.client: TRACE
 
 smartcosmos:
   security:
@@ -35,3 +42,13 @@ smartcosmos:
         location-uri: http://smartcosmos-auth-server
         name: ${security.oauth2.client.client-id}
         password: ${security.oauth2.client.client-secret}
+
+logging:
+  level:
+    ROOT: INFO
+    com.netflix.zuul: INFO
+    org.springframework:
+      boot.autoconfigure.security.oauth2: INFO
+      security.oauth2: INFO
+      security: INFO
+      web.client: INFO

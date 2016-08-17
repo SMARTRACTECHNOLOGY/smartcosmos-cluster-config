@@ -6,7 +6,7 @@ server:
 
 kafka:
   broker:
-    host: ${KAFKA_IP:172.18.0.3}
+    host: ${KAFKA_IP:172.17.0.3}
     port: 9092
     address: ${kafka.broker.host}:${kafka.broker.port}
   zookeeper:
@@ -15,6 +15,11 @@ kafka:
     address: ${kafka.zookeeper.host}:${kafka.zookeeper.port}
 
 smartcosmos:
+  datasource:
+    default-host: mysql
+    default-username: cosmos
+    default-password: dev
+    default-db: devkit
   authorization-server: http://localhost:9999
   event-header: "urn:smartcosmos://events:"
 
@@ -25,6 +30,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enables: true
 management:
   port: 0
 
@@ -64,8 +71,8 @@ spring:
 #    async:
 #      request-timeout: 60000
 
-#  ribbon:
-#    ReadTimeout: 120000
+ribbon:
+  ReadTimeout: 30000
 
   cloud:
     stream:
