@@ -86,8 +86,8 @@ logging:
   level:
     ROOT: INFO
     com.netflix:
-      eureka.registry: INFO
-      discovery.shared.resolver.aws.ConfigClusterResolver: INFO
+      eureka.registry: WARN
+      discovery.shared.resolver.aws.ConfigClusterResolver: WARN
     org.apache.kafka.clients:
-      producer: INFO
-      consumer: INFO
+      producer: WARN
+      consumer: WARN
