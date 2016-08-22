@@ -3,6 +3,8 @@ server:
 # Debug option: prevent timeout
 #  session:
 #    timeout: 60000
+management:
+  port: 0
 
 kafka:
   broker:
@@ -32,8 +34,6 @@ eureka:
       defaultZone: http://service-discovery:8080/eureka/
     healthcheck:
       enables: true
-management:
-  port: 0
 
 security:
   oauth2:
@@ -66,21 +66,11 @@ spring:
     deserialization:
       ACCEPT_SINGLE_VALUE_AS_ARRAY: true
 
-# Debug options: prevent timeouts
-#  mvc:
-#    async:
-#      request-timeout: 60000
-
 ribbon:
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+  http.client.enabled: true
   ReadTimeout: 30000
-
-  cloud:
-    stream:
-      bindings:
-        smartcosmos-events-output:
-          destination: ${smart-cosmos.event-header}
-        smartcosmos-events-input:
-          destination: "${smart-cosmos.event-header}*"
 
 logging:
   level:
