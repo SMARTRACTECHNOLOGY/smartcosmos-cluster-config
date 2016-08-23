@@ -6,7 +6,7 @@ server:
 spring:
   datasource:
     #
-    # CREATE DATABASE devkit;  GRANT ALL PRIVILEGES ON devkit.* TO 'cosmos'@'localhost' IDENTIFIED BY 'dev';  FLUSH PRIVILEGES;
+    # DROP DATABASE devkit; CREATE DATABASE devkit;  GRANT ALL PRIVILEGES ON devkit.* TO 'cosmos'@'localhost' IDENTIFIED BY 'dev';  FLUSH PRIVILEGES;
     #
     url: jdbc:mysql://${smartcosmos.datasource.default-host}/${smartcosmos.datasource.default-db}
     username: ${smartcosmos.datasource.default-username}
@@ -37,5 +37,5 @@ logging:
   level:
     ROOT: INFO
     net.smartcosmos: INFO
-    org.springframework.security: INFO
+    org.springframework.security: DEBUG
     com.netflix.eureka.registry: INFO

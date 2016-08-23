@@ -55,8 +55,6 @@ security:
           PQIDAQAB
           -----END PUBLIC KEY-----
 
-ribbon.http.client.enabled: true
-
 spring:
   redis:
     host: ${EVENT_SERVER_URL:localhost}
@@ -66,21 +64,11 @@ spring:
     deserialization:
       ACCEPT_SINGLE_VALUE_AS_ARRAY: true
 
-# Debug options: prevent timeouts
-#  mvc:
-#    async:
-#      request-timeout: 60000
-
 ribbon:
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+  http.client.enabled: true
   ReadTimeout: 30000
-
-  cloud:
-    stream:
-      bindings:
-        smartcosmos-events-output:
-          destination: ${smart-cosmos.event-header}
-        smartcosmos-events-input:
-          destination: "${smart-cosmos.event-header}*"
 
 logging:
   level:
