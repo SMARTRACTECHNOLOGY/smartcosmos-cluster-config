@@ -22,7 +22,7 @@ spring:
 # XXX Super dangerous to let this get to production.
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
       naming_strategy: org.hibernate.cfg.EJB3NamingStrategy
 
 smartcosmos:
