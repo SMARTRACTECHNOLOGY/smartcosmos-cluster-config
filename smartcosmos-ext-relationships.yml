@@ -3,10 +3,6 @@
 server:
   port: 45369
 
-security:
-  user:
-    password: password
-
 spring:
   datasource:
     #
@@ -28,14 +24,3 @@ spring:
     hibernate:
       ddl-auto: validate
       naming_strategy: org.hibernate.cfg.EJB3NamingStrategy
-
-smartcosmos:
-  security:
-    enabled: true
-
-logging:
-  level:
-    ROOT: INFO
-    net.smartcosmos: INFO
-    org.springframework.security: INFO
-    com.netflix.eureka.registry: INFO

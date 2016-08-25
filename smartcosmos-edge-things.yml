@@ -1,23 +1,9 @@
 server:
   port: 50594
 
-security:
-  user:
-    password: password
-
 smartcosmos:
-  security:
-    enabled: true
-
   edge:
     things:
       local:
         things: smartcosmos-ext-things
         metadata: smartcosmos-ext-metadata
-
-logging:
-  level:
-    ROOT: INFO
-    net.smartcosmos: INFO
-    org.springframework.security: INFO
-    com.netflix.eureka.registry: INFO

@@ -32,6 +32,10 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
     healthcheck:
       enables: true
+
+hystrix:
+  command.default.execution.isolation.strategy: THREAD
+
 management:
   port: 0
 
@@ -54,11 +58,6 @@ security:
           H7qQPYIAx4HfKd74sY/0Jom42Vml4YnNZuDQWm9Z+K79MI3GQXbXB/Rng+fAwilf
           PQIDAQAB
           -----END PUBLIC KEY-----
-
-spring:
-  redis:
-    host: ${EVENT_SERVER_URL:localhost}
-    password:
 
   jackson:
     deserialization:
