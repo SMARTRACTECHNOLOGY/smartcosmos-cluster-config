@@ -23,10 +23,3 @@ spring:
       ddl-auto: validate
       naming_strategy: org.hibernate.cfg.EJB3NamingStrategy
 
-logging:
-  level:
-    ROOT: INFO
-    org.springframework:
-      boot.autoconfigure.security.oauth2: INFO
-      security.oauth2: INFO
-      web.client: INFO

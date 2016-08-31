@@ -4,6 +4,11 @@ server:
 #  session:
 #    timeout: 60000
 
+management:
+  port: 0
+  # security:
+  #   enabled: false
+
 kafka:
   broker:
     host: ${KAFKA_IP:172.17.0.3}
@@ -36,8 +41,7 @@ eureka:
 hystrix:
   command.default.execution.isolation.strategy: THREAD
 
-management:
-  port: 0
+
 
 security:
   oauth2:
@@ -59,11 +63,13 @@ security:
           PQIDAQAB
           -----END PUBLIC KEY-----
 
+spring:
   jackson:
     deserialization:
       ACCEPT_SINGLE_VALUE_AS_ARRAY: true
 
 ribbon:
+  http.client.enabled: true
   MaxAutoRetries: 1
   MaxAutoRetriesNextServer: 2
   http.client.enabled: true
