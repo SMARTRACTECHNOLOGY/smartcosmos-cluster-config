@@ -8,9 +8,6 @@ management.security.enabled: false
 eureka:
   instance:
     hostname: service-discovery
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
   server:
     waitTimeInMsWhenSyncEmpty: 4
     enable-self-preservation: false

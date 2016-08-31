@@ -9,9 +9,9 @@ zuul:
   ignoredServices: "*"
   prefix:
   routes:
-    smartcosmos-edge-things: /rest/things/**
-    smartcosmos-ext-metadata: /rest/metadata/**
-    smartcosmos-ext-relationships: /rest/relationships/**
+    smartcosmos-edge-things: /things/**
+    smartcosmos-ext-metadata: /metadata/**
+    smartcosmos-ext-relationships: /relationships/**
     users:
       path: /users/**
       stripPrefix: false
@@ -26,14 +26,15 @@ zuul:
       serviceId: smartcosmos-edge-user-devkit
     eureka:
       path: /eureka/**
-      url: http://service-discovery:8080/eureka
+      stripPrefix: false
+      serviceId: smartcosmos-service-discovery
     sd:
       path: /service-discovery/**
-      url: http://service-discovery:8080
+      serviceId: smartcosmos-service-discovery
     oauth:
       path: /oauth/**
       stripPrefix: false
-      url: ${smartcosmos.authorization-server}
+      serviceId: smartcosmos-auth-server
 
 smartcosmos:
   security:

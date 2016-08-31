@@ -36,7 +36,12 @@ eureka:
     serviceUrl:
       defaultZone: http://service-discovery:8080/eureka/
     healthcheck:
-      enables: true
+      enabled: true
+
+hystrix:
+  command.default.execution.isolation.strategy: THREAD
+
+
 
 security:
   oauth2:
@@ -58,18 +63,13 @@ security:
           PQIDAQAB
           -----END PUBLIC KEY-----
 
-ribbon.http.client.enabled: true
-
 spring:
-  redis:
-    host: ${EVENT_SERVER_URL:localhost}
-    password:
-
   jackson:
     deserialization:
       ACCEPT_SINGLE_VALUE_AS_ARRAY: true
 
 ribbon:
+  http.client.enabled: true
   MaxAutoRetries: 1
   MaxAutoRetriesNextServer: 2
   http.client.enabled: true

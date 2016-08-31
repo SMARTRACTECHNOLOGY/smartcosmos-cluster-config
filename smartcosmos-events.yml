@@ -1,9 +1,2 @@
 server:
   port: 8080
-
-logging:
-  level:
-    ROOT: INFO
-    "org.springframework.integration": INFO
-    "org.springframework.data": INFO
-    "org.springframework.data.redis.core.RedisConnectionUtils" : INFO
