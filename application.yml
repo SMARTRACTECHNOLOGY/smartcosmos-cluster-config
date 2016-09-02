@@ -69,10 +69,11 @@ spring:
       ACCEPT_SINGLE_VALUE_AS_ARRAY: true
 
 ribbon:
-  http.client.enabled: true
   MaxAutoRetries: 1
   MaxAutoRetriesNextServer: 2
-  http.client.enabled: true
+  http:
+    client:
+      enabled: true
   ReadTimeout: 30000
 
 logging:
