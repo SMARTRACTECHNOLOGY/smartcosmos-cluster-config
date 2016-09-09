@@ -1,5 +1,4 @@
 server:
-  port: 0
 # Debug option: prevent timeout
 #  session:
 #    timeout: 60000
