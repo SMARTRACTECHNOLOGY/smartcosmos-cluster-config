@@ -70,7 +70,9 @@ spring:
 ribbon:
   MaxAutoRetries: 1
   MaxAutoRetriesNextServer: 2
-  http.client.enabled: true
+  http:
+    client:
+      enabled: true
   ReadTimeout: 30000
 
 logging:
