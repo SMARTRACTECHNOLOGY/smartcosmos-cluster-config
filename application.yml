@@ -39,8 +39,13 @@ eureka:
       enabled: true
 
 hystrix:
-  command.default.execution.isolation.strategy: THREAD
-
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 10000
 
 
 security:
