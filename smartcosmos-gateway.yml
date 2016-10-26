@@ -2,7 +2,7 @@ info:
   component: Zuul Server
 
 server:
-  port: 8080
+  port: 8082
 
 zuul:
   sensitiveHeaders:
@@ -35,6 +35,10 @@ zuul:
       path: /oauth/**
       stripPrefix: false
       serviceId: smartcosmos-auth-server
+    flows:
+      path: /flows/**
+      stripPrefix: true
+      url: http://localhost:8085/rest/
 
 smartcosmos:
   security:
