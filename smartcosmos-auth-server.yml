@@ -35,3 +35,4 @@ smartcosmos:
           password: '{cipher}95aa290e4fd9d380ef9fe9abb492065d1fff2b74f4c32a3aa8c8c07a7882b997'
         server:
           location-uri: ${smartcosmos.service.user-details.address}
+      cachedUserKeepAliveSecs: 300

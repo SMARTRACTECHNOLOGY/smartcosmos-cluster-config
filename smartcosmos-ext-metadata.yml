@@ -1,6 +1,10 @@
 server:
   port: 45037
 
+flyway:
+  enabled: true
+  baselineOnMigrate: true
+  
 spring:
   datasource:
     #
