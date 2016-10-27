@@ -2,7 +2,7 @@ info:
   component: Auth Server
 
 server:
-  port: 9999
+  port: ${smartcosmos.service.auth-server.port}
 
 security:
   oauth2:

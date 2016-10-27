@@ -21,17 +21,56 @@ kafka:
 
 smartcosmos:
   service:
-    gateway: http://localhost:8080
-    auth-server: http://localhost:9999
-    config-server: http://localhost:8888
-    edge-things: http://localhost:50594
+    gateway:
+      host: http://localhost
+      port: 8080
+      address: ${smartcosmos.service.gateway.host}:${smartcosmos.service.gateway.port}
+    auth-server:
+      host: http://localhost
+      port: 9999
+      address: ${smartcosmos.service.auth-server.host}:${smartcosmos.service.auth-server.port}
+    config-server:
+      host: http://localhost
+      port: 8888
+      address: ${smartcosmos.service.config-server.host}:${smartcosmos.service.config-server.port}
+    edge-things:
+      host: http://localhost
+      port: 50594
+      address: ${smartcosmos.service.edge-things.host}:${smartcosmos.service.edge-things.port}
+    edge-user:
+      host: http://localhost
+      port: 45371
+      address: ${smartcosmos.service.edge-user.host}:${smartcosmos.service.edge-user.port}
+    events:
+      host: http://localhost
+      port: 45012
+      address: ${smartcosmos.service.events.host}:${smartcosmos.service.events.port}
+    ext-metadata:
+      host: http://localhost
+      port: 45037
+      address: ${smartcosmos.service.ext-metadata.host}:${smartcosmos.service.ext-metadata.port}
+    ext-things:
+      host: http://localhost
+      port: 45336
+      address: ${smartcosmos.service.ext-things.host}:${smartcosmos.service.ext-things.port}
+    ext-relationships:
+      host: http://localhost
+      port: 45369
+      address: ${smartcosmos.service.ext-relationships.host}:${smartcosmos.service.ext-relationships.port}
+    flows:
+      host: http://localhost
+      port: 8085
+      address: ${smartcosmos.service.flows.host}:${smartcosmos.service.flows.port}
+    user-details:
+      host: http://localhost
+      port: 7777
+      address: ${smartcosmos.service.user-details.host}:${smartcosmos.service.user-details.port}
 
   datasource:
     default-host: localhost
     default-username: cosmos
     default-password: dev
     default-db: devkit
-  authorization-server: http://localhost:9999
 
 info:
   description: SMART COSMOS Cluster Services

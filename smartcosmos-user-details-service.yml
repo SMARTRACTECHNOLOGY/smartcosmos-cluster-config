@@ -1,5 +1,5 @@
 server:
-  port: 42000
+  port: 7777
 
 smartcosmos:
   security:
