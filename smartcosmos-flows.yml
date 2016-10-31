@@ -1,18 +1,14 @@
 server:
-  port: 45037
+  port: 8085
 
-flyway:
-  enabled: true
-  baselineOnMigrate: true
-  
 spring:
   datasource:
     #
     # CREATE DATABASE devkit;  GRANT ALL PRIVILEGES ON devkit.* TO 'cosmos'@'localhost' IDENTIFIED BY 'dev';  FLUSH PRIVILEGES;
     #
-    url: jdbc:mysql://${smartcosmos.datasource.default-host}/${smartcosmos.datasource.default-db}
-    username: ${smartcosmos.datasource.default-username}
-    password: ${smartcosmos.datasource.default-password}
+    url: jdbc:mysql://localhost/camunda
+    username: dbuser
+    password: dbpass
     driver-class-name: org.mariadb.jdbc.Driver
     ## XXX Note that in the migration to Spring Boot 1.4 these will need to move:
     test-on-borrow: true
