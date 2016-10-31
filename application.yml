@@ -18,24 +18,66 @@ kafka:
     port: 2181
     address: ${kafka.zookeeper.host}:${kafka.zookeeper.port}
 
+eureka:
+  client:
+    enabled: false
+
 smartcosmos:
+  service:
+    gateway:
+      host: http://gateway
+      port: 8080
+      address: ${smartcosmos.service.gateway.host}:${smartcosmos.service.gateway.port}
+    auth-server:
+      host: http://auth-server
+      port: 8080
+      address: ${smartcosmos.service.auth-server.host}:${smartcosmos.service.auth-server.port}
+    config-server:
+      host: http://config-server
+      port: 8080
+      address: ${smartcosmos.service.config-server.host}:${smartcosmos.service.config-server.port}
+    edge-things:
+      host: http://edge-things
+      port: 8080
+      address: ${smartcosmos.service.edge-things.host}:${smartcosmos.service.edge-things.port}
+    edge-user:
+      host: http://edge-user-devkit
+      port: 8080
+      address: ${smartcosmos.service.edge-user.host}:${smartcosmos.service.edge-user.port}
+    events:
+      host: http://events
+      port: 8080
+      address: ${smartcosmos.service.events.host}:${smartcosmos.service.events.port}
+    ext-metadata:
+      host: http://ext-metadata
+      port: 8080
+      address: ${smartcosmos.service.ext-metadata.host}:${smartcosmos.service.ext-metadata.port}
+    ext-things:
+      host: http://ext-things
+      port: 8080
+      address: ${smartcosmos.service.ext-things.host}:${smartcosmos.service.ext-things.port}
+    ext-relationships:
+      host: http://ext-relationships
+      port: 8080
+      address: ${smartcosmos.service.ext-relationships.host}:${smartcosmos.service.ext-relationships.port}
+    flows:
+      host: http://flows
+      port: 8080
+      address: ${smartcosmos.service.flows.host}:${smartcosmos.service.flows.port}
+    user-details:
+      host: http://user-details-devkit
+      port: 8080
+      address: ${smartcosmos.service.user-details.host}:${smartcosmos.service.user-details.port}
+
   datasource:
     default-host: mysql
     default-username: cosmos
     default-password: dev
     default-db: devkit
-  authorization-server: http://auth-server:8080
-  event-header: "urn:smartcosmos://events:"
 
 info:
   description: SMART COSMOS Cluster Services
   url: https://www.smart-cosmos.com/
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://service-discovery:8080/eureka/
-    healthcheck:
-      enabled: true
 
 hystrix:
   command:
@@ -71,14 +113,6 @@ spring:
   jackson:
     deserialization:
       ACCEPT_SINGLE_VALUE_AS_ARRAY: true
-
-ribbon:
-  MaxAutoRetries: 1
-  MaxAutoRetriesNextServer: 2
-  http:
-    client:
-      enabled: true
-  ReadTimeout: 30000
 
 logging:
   level:
