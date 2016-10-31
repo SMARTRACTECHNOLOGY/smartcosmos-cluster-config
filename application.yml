@@ -18,6 +18,10 @@ kafka:
     port: 2181
     address: ${kafka.zookeeper.host}:${kafka.zookeeper.port}
 
+eureka:
+  client:
+    enabled: false
+
 smartcosmos:
   service:
     gateway:
