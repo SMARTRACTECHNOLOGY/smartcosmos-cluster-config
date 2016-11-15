@@ -34,10 +34,6 @@ zuul:
       path: /oauth/**
       stripPrefix: false
       url: ${smartcosmos.service.auth-server.address}
-    flows:
-      path: /flows/**
-      stripPrefix: true
-      url: ${smartcosmos.service.flows.address}
 
 smartcosmos:
   security:

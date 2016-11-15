@@ -1,2 +1,2 @@
 server:
-  port: 45012
+  port: ${smartcosmos.service.events.address}
