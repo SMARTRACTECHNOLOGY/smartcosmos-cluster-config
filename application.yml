@@ -1,5 +1,4 @@
-server:
-  port: 0
+# server:
 # Debug option: prevent timeout
 #  session:
 #    timeout: 60000
@@ -8,6 +7,10 @@ management:
   port: 0
   # security:
   #   enabled: false
+
+eureka:
+  client:
+    enabled: false
 
 smartcosmos:
   service:

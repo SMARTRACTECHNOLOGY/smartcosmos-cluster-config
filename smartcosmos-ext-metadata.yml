@@ -1,5 +1,5 @@
 server:
-  port: 45037
+  port: ${smartcosmos.service.ext-metadata.address}
 
 flyway:
   enabled: true
