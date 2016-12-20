@@ -8,22 +8,20 @@ management:
   # security:
   #   enabled: false
 
-kafka:
-  broker:
-    host: http://kafka
-    port: 9092
-    address: ${kafka.broker.host}:${kafka.broker.port}
-  zookeeper:
-    host: http://zookeeper
-    port: 2181
-    address: ${kafka.zookeeper.host}:${kafka.zookeeper.port}
-
 eureka:
   client:
     enabled: false
 
 smartcosmos:
   service:
+    kafka:
+      host: http://kafka
+      port: 9092
+      address: ${smartcosmos.service.kafka.host}:${smartcosmos.service.kafka.port}
+    zookeeper:
+      host: http://zookeeper
+      port: 2181
+      address: ${smartcosmos.service.zookeeper.host}:${smartcosmos.service.zookeeper.port}
     gateway:
       host: http://gateway
       port: 8080
