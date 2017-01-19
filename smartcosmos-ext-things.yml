@@ -4,7 +4,8 @@ server:
 flyway:
   enabled: true
   baselineOnMigrate: true
-  
+  locations: classpath:db/migration/common, classpath:db/migration/mysql
+
 spring:
   datasource:
     #
@@ -26,4 +27,3 @@ spring:
     hibernate:
       ddl-auto: validate
       naming_strategy: org.hibernate.cfg.EJB3NamingStrategy
-
