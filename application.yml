@@ -8,10 +8,6 @@ management:
   # security:
   #   enabled: false
 
-eureka:
-  client:
-    enabled: false
-
 smartcosmos:
   service:
     kafka:
@@ -77,16 +73,6 @@ info:
   description: SMART COSMOS Cluster Services
   url: https://www.smart-cosmos.com/
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          strategy: THREAD
-          thread:
-            timeoutInMilliseconds: 10000
-
-
 security:
   oauth2:
     client:
@@ -115,9 +101,6 @@ spring:
 logging:
   level:
     ROOT: INFO
-    com.netflix:
-      eureka.registry: WARN
-      discovery.shared.resolver.aws.ConfigClusterResolver: WARN
     org.apache.kafka.clients:
       producer: WARN
       consumer: WARN
